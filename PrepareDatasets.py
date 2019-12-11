@@ -28,8 +28,8 @@ def get_args_dict():
                         default=False, help='use 1 as feature')
     parser.add_argument('--use-degree', dest='use_node_degree', action='store_true',
                         default=False, help='use degree as feature')
-    parser.add_argument('--no-kron', dest='dont_precompute_kron_indices', action='store_false',
-                        default=True, help='don\'t precompute kron reductions')
+    parser.add_argument('--precompute-kron', dest='precompute_kron_indices', action='store_false',
+                        default=False, help='precompute kron reductions')
 
     return vars(parser.parse_args())
 
